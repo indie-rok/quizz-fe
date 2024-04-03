@@ -4,12 +4,10 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: './index.html',
-                quizz: './quizz.html',
-                leaderboard: './leaderboard.html',
+                'index.html': './index.html',
+                'quizz.html': './quizz.html',
+                'leaderboard.html': './leaderboard.html',
                 leaderboard1: './leaderboard1.js'
-                // ...
-                // List all files you want in your build
             }
         }
     }
