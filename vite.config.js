@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from "vite"
 
 export default defineConfig({
@@ -6,8 +7,7 @@ export default defineConfig({
             input: {
                 'index.html': './index.html',
                 'quizz.html': './quizz.html',
-                'leaderboard.html': './leaderboard.html',
-                'l1': './l1.js',
+                leaderboard: resolve(__dirname, 'leaderboard/index.html'),
             }
         }
     }
