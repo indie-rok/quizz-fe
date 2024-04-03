@@ -7,7 +7,6 @@ export default defineConfig({
                 'index.html': './index.html',
                 'quizz.html': './quizz.html',
                 'leaderboard.html': './leaderboard.html',
-                leaderboard1: './leaderboard1.js'
             }
         }
     }
