@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+</head>
+
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="quiz-container">
+        <div id="question"></div>
+        <ul id="options"></ul>
+        <div id="feedback"></div>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        <div id="score"></div>
+
+        <div id="end-screen" style="display: none;">
+            <h2>Your score: <span id="final-score"></span></h2>
+            <input type="text" />
+            <label for="">Your name</label>
+            <button id="submit-score">Submit Score</button>
+            <a href="leaderboard.html" target="_blank">View Leaderboard</a>
+        </div>
+    </div>
+
+    <script type="module" src="/quizz.js"></script>
+</body>
+
+</html>
