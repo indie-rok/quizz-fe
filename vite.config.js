@@ -7,7 +7,7 @@ export default defineConfig({
                 main: './index.html',
                 quizz: './quizz.html',
                 leaderboard: './leaderboard.html',
-                js1: './leaderboard.js'
+                leaderboard1: './leaderboard1.js'
                 // ...
                 // List all files you want in your build
             }
