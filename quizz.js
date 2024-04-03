@@ -15,6 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const finalScoreElement = document.getElementById('final-score');
   const submitScoreButton = document.getElementById('submit-score');
 
+  function submitScoreToLeaderboard(name) {
+    fetch('https://back-end-quizz.onrender.com/leaderboard', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, score }),
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => console.log(data.message))
+      .catch(error => console.error('There has been a problem with your fetch operation:', error));
+  }
+
   function updateProgressBar() {
     const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
     progressBar.style.width = `${progress}%`;
@@ -70,8 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Simulate score submission (adjust according to your backend implementation)
   submitScoreButton.addEventListener('click', () => {
-    alert('Score submitted! (Simulated)');
-    // Here you would typically send the score to your server or leaderboard service.
+    let playerName = document.getElementById("player-name").value
+    submitScoreToLeaderboard(playerName, playerScore);
+    alert('Score submitted!');
   });
 
   showQuestion(quizData[currentQuestionIndex]);
