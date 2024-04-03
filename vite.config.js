@@ -7,7 +7,7 @@ export default defineConfig({
             input: {
                 'index.html': './index.html',
                 'quizz.html': './quizz.html',
-                'leaderboard.js': resolve(__dirname, 'leaderboard/leaderboard.js'),
+                'leaderboard.html': './leaderboard.html',
             }
         }
     }
