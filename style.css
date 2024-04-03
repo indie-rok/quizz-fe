@@ -43,3 +43,44 @@ button {
   width: 0%;
   transition: width 0.4s ease-in-out;
 }
+
+/* Base styles */
+.end-screen h2 {
+  font-size: 1.25rem; /* Adjust font size */
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group input[type="text"] {
+  font-size: 1rem; /* Increase font size for readability */
+  padding: 0.5rem; /* Increase padding for easier interaction */
+  margin-bottom: 0.5rem; /* Ensure space between the input and its label */
+  width: 100%; /* Full width to utilize space */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.input-group label {
+  display: block; /* Ensure the label is on a new line */
+  font-size: 36px;
+}
+
+.submit-btn,
+.view-leaderboard {
+  display: inline-block; /* Align buttons next to each other on larger screens */
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem; /* Larger touch targets */
+  margin: 0.25rem 0; /* Space between buttons */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width for mobile */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Media query for larger screens */
+
+.submit-btn,
+.view-leaderboard {
+  width: auto; /* Auto width on larger screens */
+}

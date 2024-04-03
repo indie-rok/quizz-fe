@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Simulate score submission (adjust according to your backend implementation)
   submitScoreButton.addEventListener('click', () => {
     let playerName = document.getElementById("player-name").value
-    submitScoreToLeaderboard(playerName, playerScore);
+    submitScoreToLeaderboard(playerName);
     alert('Score submitted!');
   });
 
